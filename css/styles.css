@@ -566,6 +566,10 @@ ul {
     row-gap: 48px;
 }
 
+/* .cards-list {
+    /* flex-basis: calc((100% - 48px) / 3);  */
+} */
+
 .card{
      /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
      display: block;
@@ -576,7 +580,36 @@ ul {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 } 
 
-  .card-block-text{
+.card-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay { 
+    position: absolute;  
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    background: var(--color-logo-button);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 164px;
+    overflow: auto;
+    transform:translate(0, 100%);
+    transition: transform 500ms linear;
+}
+
+.card-list-item:hover .card-overlay{
+    transform:translate(0, 0);
+}
+
+.card-block-text{
     padding: 32px 0 32px 16px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -599,5 +632,72 @@ ul {
     letter-spacing: 0.02em;    
     line-height: 1.5;
     color: var(--advantages-ourteam-text);    
+}
+
+/*----- modal Window -----*/
+
+.modal-backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    /* opacity: 1;
+    visibility: visible; */
+    transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1), visibility 750ms cubic-bezier(0.4, 0, 0.2, 1);  
+
+}
+
+.modal-modal{
+    width: 408px;
+    height: 575px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.modal-close-btn-icon{
+    
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus{
+    border-color: var(--color-button-link);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon{
+    fill: var(--color-button-link);
+}
+
+.modal-backdrop.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
 }
 
