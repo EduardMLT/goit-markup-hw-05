@@ -16,7 +16,7 @@
     --color-footer-social-ikons: #f4f4fd;
     --color-footer-social-ikons-grunt-a:  rgba(255, 255, 255, 0.1);
     --color-footer-social-ikons-grunt: #31D0AA;
-    --semofor-button-grunt: background-color 300ms cubic-bezier(1, 0.04, 1, 1);
+    --semofor-button-grunt: 300ms cubic-bezier(1, 0.04, 1, 1);
     --semofor-button-grun-customers: color 300ms cubic-bezier(1, 0.04, 1, 1), border 300ms cubic-bezier(1, 0.04, 1, 1);
 }
 
@@ -515,7 +515,7 @@ ul {
     border-radius: 50%;
     background-color: var(--color-footer-social-ikons-grunt-a);
     color: var(--color-footer-social-ikons);
-    transition: var(--semofor-button-grunt);
+    transition: background-color var(--semofor-button-grunt), color var(--semofor-button-grunt);
 }
 
 .footer-social-link:hover,
@@ -576,7 +576,7 @@ ul {
 .prtf-button-grunt{
     background: var(--ourteam-grunt-foto);
     cursor: pointer;
-    transition: var(--semofor-button-grunt);
+    transition: background-color var(--semofor-button-grunt), color var(--semofor-button-grunt);
 }
 
 /* фото наших робіт CARDS */
