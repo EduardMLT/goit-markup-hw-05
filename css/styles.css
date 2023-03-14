@@ -16,6 +16,8 @@
     --color-footer-social-ikons: #f4f4fd;
     --color-footer-social-ikons-grunt-a:  rgba(255, 255, 255, 0.1);
     --color-footer-social-ikons-grunt: #31D0AA;
+    --semofor-button-grunt: background-color 300ms cubic-bezier(1, 0.04, 1, 1);
+    --semofor-button-grun-customers: color 300ms cubic-bezier(1, 0.04, 1, 1), border 300ms cubic-bezier(1, 0.04, 1, 1);
 }
 
 
@@ -243,12 +245,13 @@ ul {
 }
 
   .hero-button{
-    background: var(--color-logo-button);    
+    background-color: var(--color-logo-button); 
+    transition: var(--semofor-button-grunt);   
 }
 
   .hero-button:hover ,
   .hero-button:focus {
-    background: var(--color-button-link);
+    background-color: var(--color-button-link);
   }
   
    /*переваги*/
@@ -369,6 +372,7 @@ ul {
     border-radius: 50%;
     background-color: var(--color-logo-button);
     color: var(--main-title-color);
+    transition: var(--semofor-button-grunt);
 }
 
 .ourteam-social-link:hover,
@@ -419,6 +423,7 @@ ul {
     border-radius: 4px;
     width: 168px;
     height: 88px;
+    transition: var(--semofor-button-grun-customers);
 }
 
 .customers-link:hover,
@@ -510,6 +515,7 @@ ul {
     border-radius: 50%;
     background-color: var(--color-footer-social-ikons-grunt-a);
     color: var(--color-footer-social-ikons);
+    transition: var(--semofor-button-grunt);
 }
 
 .footer-social-link:hover,
@@ -560,7 +566,7 @@ ul {
 
 .prtf-button-grunt:hover,
 .prtf-button-grunt:focus{
-    background: var(--color-button-link);
+    background-color: var(--color-button-link);
     color: var(--ourteam-grunt-foto);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -570,6 +576,7 @@ ul {
 .prtf-button-grunt{
     background: var(--ourteam-grunt-foto);
     cursor: pointer;
+    transition: var(--semofor-button-grunt);
 }
 
 /* фото наших робіт CARDS */
@@ -581,14 +588,10 @@ ul {
     row-gap: 48px;
 }
 
-/* .cards-list {
-    /* flex-basis: calc((100% - 48px) / 3);  */
-} */
-
 .card{
-     /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
-     display: block;
-} 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    display: block;
+}
 
 .card:hover, 
 .card:focus{
@@ -659,10 +662,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    /* opacity: 1;
-    visibility: visible; */
     transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1), visibility 750ms cubic-bezier(0.4, 0, 0.2, 1);  
-
 }
 
 .modal-modal{
