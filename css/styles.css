@@ -175,6 +175,7 @@ ul {
     content: '';
     width: 100%;
     height: 4px;
+    border-radius: 4px;
     background-color: var(--color-button-link);
     position: absolute;
     bottom: -27px;
