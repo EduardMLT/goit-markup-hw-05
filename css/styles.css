@@ -17,7 +17,7 @@
     --color-footer-social-ikons-grunt-a:  rgba(255, 255, 255, 0.1);
     --color-footer-social-ikons-grunt: #31D0AA;
     --semofor-button-grunt: 300ms cubic-bezier(1, 0.04, 1, 1);
-    --semofor-button-grun-customers: color 300ms cubic-bezier(1, 0.04, 1, 1), border 300ms cubic-bezier(1, 0.04, 1, 1);
+    --semofor-button-grun-customers:  300ms cubic-bezier(1, 0.04, 1, 1);
 }
 
 
@@ -423,7 +423,7 @@ ul {
     border-radius: 4px;
     width: 168px;
     height: 88px;
-    transition: var(--semofor-button-grun-customers);
+    transition: color var(--semofor-button-grun-customers), border var(--semofor-button-grun-customers);
 }
 
 .customers-link:hover,
